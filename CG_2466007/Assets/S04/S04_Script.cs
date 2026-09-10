@@ -16,17 +16,20 @@ public class S04_Script : MonoBehaviour
             new Vector3(1f, 0f, 1f), // 5
             new Vector3(1f, 1f, 1f), // 6
             new Vector3(0f, 1f, 1f), // 7
-            new Vector3(0.5f, 1f, 0.5f) //8
+            new Vector3(0.5f, 1f, 0.5f), // 8
+            new Vector3(0.5f, -1f, 0.5f) // 9 
         };
 
         int[] triangles = new int[]
         {
-            0, 1, 4,
-            1, 5, 4,
             8, 1, 0,
             8, 5, 1,
             8, 4, 5,
-            8, 0, 4
+            8, 0, 4,
+            9, 0, 1,
+            9, 1, 5,
+            9, 5, 4, 
+            9, 4, 0
         };
 
         Mesh mesh = new Mesh();
