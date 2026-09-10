@@ -20,8 +20,12 @@ public class S03_SingleTriangleMesh_Finish : MonoBehaviour
 
         int[] triangles = new int[]
         {
-            7, 6, 1,
-            7, 1, 0
+            7, 3, 4,
+            3, 0, 4,
+            4, 0, 5,
+            3, 1, 0,
+            0, 1, 5,
+            5, 1, 8
         };
 
         Mesh mesh = new Mesh();
