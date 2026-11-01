@@ -32,9 +32,13 @@ public class S03_SingleTriangleMesh_Finish : MonoBehaviour
         mesh.vertices = vertices;
         mesh.triangles = triangles;
         mesh.RecalculateNormals();
-
+        
         GetComponent<MeshFilter>().mesh = mesh;
-        GetComponent<MeshRenderer>().sharedMaterial = new Material(Shader.Find("Universal Render Pipeline/Lit"));
+        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+        if (meshRenderer.sharedMaterial == null)
+        {
+            meshRenderer.sharedMaterial = new Material(Shader.Find("Universal Render Pipeline/Lit"));
+        }
     }
 }
 
